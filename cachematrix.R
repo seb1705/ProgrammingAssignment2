@@ -8,7 +8,7 @@
 
 ## makeCacheMatrix is a function which creates special matrix object(x) 
 ##   which cache its inverse (inv). 
-## Object returned by this function will have functions set and get anabling   
+## Object returned by this function will have functions set, get, setsolve & getsolve  
 ##   set       store set new values to matrix 
 ##   get       retrieve values stored matrix values
 ##   setsolve  store inverse of the matrix in cache (inv)
@@ -46,5 +46,5 @@ cacheSolve <- function(x, ...) {
     i <- solve(m, ...)
     ## Update cache with inverse and return calculated inverse
     x$setsolve(i)
-    m
+    i
 }
